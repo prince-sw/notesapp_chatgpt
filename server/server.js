@@ -16,6 +16,8 @@
 const express = require("express");
 const { Configuration, OpenAIApi } = require("openai");
 const cors = require("cors");
+require("dotenv").config();
+const apiKey = process.env.OPENAI_API_KEY;
 
 const app = express();
 
@@ -23,7 +25,7 @@ app.use(cors());
 app.use(express.json());
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: apiKey,
 });
 const openai = new OpenAIApi(configuration);
 // const response = await openai.retrieveModel("text-davinci-003");
