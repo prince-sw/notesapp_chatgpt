@@ -31,15 +31,22 @@ const openai = new OpenAIApi(configuration);
 // const response = await openai.retrieveModel("text-davinci-003");
 
 app.post("/", async (req, res) => {
-  // console.log(req.body);
-  const response = await openai.createCompletion({
-    model: "text-davinci-003",
-    prompt: "Say this is a test",
-    max_tokens: 7,
-    temperature: 0,
+  const inputText = req.body.message;
+  console.log(inputText);
+  // const response = await openai.createCompletion({
+  //   model: "text-davinci-003",
+  //   prompt: `Convert the following movie into emoji: ${inputText}`,
+  //   temperature: 0.8,
+  //   max_tokens: 60,
+  // });
+  const response = await openai.createImage({
+    prompt: "A cute baby sea otter",
+    n: 2,
+    size: "1024x1024",
   });
   if (response.data) {
-    res.json(response.data.choices[0].text);
+    // res.json(response.data.choices[0].text);
+    res.json(response.data[0].url);
   }
   // console.log(response.data);
   // res.json(req.body);
