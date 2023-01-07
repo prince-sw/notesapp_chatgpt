@@ -16,17 +16,18 @@ const openai = new OpenAIApi(configuration);
 // const response = await openai.retrieveModel("text-davinci-003");
 
 app.post("/", async (req, res) => {
-  const inputText = req.body.message;
+  const inputText = req.body.inputValue;
   console.log(inputText);
   const response = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: `Convert the following movie into emoji: ${inputText}`,
+    prompt: `Give me 5 points about: ${inputText}`,
     temperature: 0.8,
-    max_tokens: 60,
+    max_tokens: 200,
   });
 
   if (response.data) {
     res.json(response.data.choices[0].text);
+    res.json(console.log(response.data.choices[0].text));
     // res.json(response.data[0].url);
   }
   // console.log(response.data);
