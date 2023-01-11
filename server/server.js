@@ -20,7 +20,7 @@ app.post("/", async (req, res) => {
   console.log(inputText);
   const response = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: `Give me 5 points about: ${inputText}`,
+    prompt: `Rephrase this for cv Currently seeking an opportunity to work in an organization where I can apply my knowledge and skills in a professional environment to help the company as much as I can, while also gaining valuable experience and developing my technical expertise. : ${inputText}`,
     temperature: 0.8,
     max_tokens: 200,
   });
