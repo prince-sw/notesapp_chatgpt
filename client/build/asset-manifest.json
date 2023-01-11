@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/notesapp_chatgpt/static/css/main.e6c13ad2.css",
+    "main.js": "/notesapp_chatgpt/static/js/main.e06f6135.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/notesapp_chatgpt/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/notesapp_chatgpt/index.html",
+    "main.e6c13ad2.css.map": "/notesapp_chatgpt/static/css/main.e6c13ad2.css.map",
+    "main.e06f6135.js.map": "/notesapp_chatgpt/static/js/main.e06f6135.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/notesapp_chatgpt/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.e06f6135.js"
+  ]
+}
